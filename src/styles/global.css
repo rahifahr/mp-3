@@ -12,7 +12,7 @@
 }
 
 body {
-    font: normal normal 400 16px "Open Sans", Arial, sans-serif;
+    font: normal normal 400 calc(1rem + 0.1vw) "Open Sans", Arial, sans-serif;
     line-height: 1.2;
     color: var(--text);
     background-color: var(--page-bg);
@@ -212,7 +212,7 @@ footer a {
         width: 100%;
         padding: 8px 3px;
         margin: 0;
-        font-size: 11px;
+        font-size: calc(0.6rem + 0.2vw);
         white-space: nowrap;
     }
 

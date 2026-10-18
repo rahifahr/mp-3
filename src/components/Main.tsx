@@ -7,7 +7,6 @@ interface MainProps {
     children: ReactNode;
 }
 
-// <main> always begins with the title heading, then the page content.
 export default function Main({ title, tabTitle, children }: MainProps) {
     usePageTitle(tabTitle ?? title);
 

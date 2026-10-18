@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 export type Operation = '+' | '-' | '*' | '/' | '**';
 
-// power() must use a for() loop (no Math.pow or **).
 export function power(base: number, exponent: number): number | null {
     if (!Number.isInteger(exponent)) {
         return null;
@@ -15,7 +14,6 @@ export function power(base: number, exponent: number): number | null {
     return exponent < 0 ? 1 / result : result;
 }
 
-// One table replaces the four copy-pasted addition/subtraction/multiplication/division functions.
 const operations: Record<Operation, (a: number, b: number) => number | null> = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
@@ -26,7 +24,6 @@ const operations: Record<Operation, (a: number, b: number) => number | null> = {
 
 export const operationSymbols = Object.keys(operations) as Operation[];
 
-// Custom hook: one place for the state, the "negative = red" check, and clear.
 export function useCalculator() {
     const [first, setFirst] = useState('');
     const [second, setSecond] = useState('');
@@ -43,7 +40,6 @@ export function useCalculator() {
             showMessage('Please enter two numbers');
             return;
         }
-        // .value is a String, so convert before doing math
         const a = Number(first);
         const b = Number(second);
         const result = operations[operation](a, b);
