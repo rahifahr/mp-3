@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #3F383A;
+    --page-bg: #FCF9F9;
+    --blush: #F8E9ED;
+    --rose: #8B4A5A;
+    --rose-light: #B87585;
+}
+
+body {
+    font: normal normal 400 16px "Open Sans", Arial, sans-serif;
+    line-height: 1.2;
+    color: var(--text);
+    background-color: var(--page-bg);
+}
+
+header {
+    background-color: var(--blush);
+    text-align: center;
+    padding: 30px 25px;
+}
+
+header h1 {
+    font: normal normal 700 calc(1.8rem + 0.3vw) "DM Serif Display", Georgia, serif;
+    margin-bottom: 5px;
+    color: #2C2C2C;
+}
+
+header p {
+    font: italic normal 400 calc(0.9rem + 0.1vw) "Open Sans", Arial, sans-serif;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    width: 180px;
+    padding: 12px 18px;
+    margin: 5px;
+    background-color: var(--rose);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid var(--rose);
+}
+
+nav a:hover {
+    background-color: var(--rose-light);
+    border-color: var(--rose-light);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 30px;
+}
+
+main > h2 {
+    max-width: 850px;
+    margin: 0 auto 15px auto;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--blush);
+    font: normal normal 700 calc(1.7rem + 0.3vw) "DM Serif Display", Georgia, serif;
+    color: #2C2C2C;
+}
+
+.content {
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+}
+
+.content h3 {
+    font: normal normal 700 calc(1.1rem + 0.15vw) "Open Sans", Arial, sans-serif;
+    color: #444444;
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+.content h4 {
+    font: normal normal 700 calc(0.95rem + 0.1vw) "Open Sans", Arial, sans-serif;
+    color: #444444;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.content p {
+    font: normal normal 400 calc(0.9rem + 0.1vw) "Open Sans", Arial, sans-serif;
+    color: #555555;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.content ul {
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.home-photo {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.home-text + .home-text {
+    margin-top: 1.4em;
+}
+
+footer {
+    background-color: var(--blush);
+    padding: 18px 25px;
+    text-align: center;
+    color: #666666;
+    font: normal normal 400 calc(0.8rem + 0.1vw) "Open Sans", Arial, sans-serif;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+@media (min-width: 751px) {
+    header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 25%;
+        height: 100vh;
+        padding: 60px 35px;
+    }
+
+    header h1 {
+        font-size: calc(1.9rem + 0.3vw);
+    }
+
+    header p {
+        margin-bottom: 30px;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        width: 180px;
+        max-width: 100%;
+        margin: 8px auto;
+    }
+
+    main {
+        width: 75%;
+        margin-left: 25%;
+        padding: 60px 50px;
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    footer {
+        width: 75%;
+        margin-left: 25%;
+        padding: 20px 50px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        position: static;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: calc(1.6rem + 0.3vw);
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+    }
+
+    nav li {
+        display: block;
+        flex: 1;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 8px 3px;
+        margin: 0;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .home-photo {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    footer {
+        width: 100%;
+    }
+}
